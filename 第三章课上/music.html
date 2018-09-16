@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/music.css"/>
+			<script >
+	
+				function change1(){
+		document.getElementById("ben").style.backgroundColor="#6495ED";
+		document.getElementById("zai").style.backgroundColor="#3D3D3D";
+}
+		function change2(){
+			document.getElementById("ben").style.backgroundColor="#3D3D3D";
+			document.getElementById("zai").style.backgroundColor="#6495ED";
+		}
+		function bo(){
+			var s=document.getElementById("audio");
+			s.src="img/2.mp3"
+		}
+			function bo2(){
+			var s=document.getElementById("audio");
+			s.src="img/当你.mp3"
+		}
+			</script>
+		<title>music</title>
+	</head>
+	<body>
+		<nav>
+			<div id="ben" onclick="change1()">
+		 <a href="#" class="a">在线音乐</a>
+		   	</div>
+		   	<div id="zai" onclick="change2()">
+		<a href="#" class="a">本地音乐</a>
+		   </div>
+		</nav>
+
+		<article>
+			<p>当你 -林俊杰 
+			<input type="button" value="播放" onclick="bo()" class="bu"></p>
+			<p>返老还童 -Jony J
+			<input type="button" value="播放"onclick="bo2()" class="bu"></p>
+		</article>
+		<audio controls="controls" onvolumechange="10" autoplay="autoplay" id="audio">
+			您的浏览器不支持Audio
+		</audio>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/biaodan.css"/>
+		<script src="js/biaodan.js" type="application/javascript"></script>
+
+		<title 表单></title>
+	</head>
+	<body>
+		<form>
+			<header>请填写个人信息</header>
+		</br>
+		<fieldset>
+				<legend id="le">基本信息</legend>
+				姓名<input type="text" name="name" placeholder="输入姓名" autofocus="true" required="true">
+				<span>*</span>
+				</br>
+				</br>年龄<input type="number"  name="age"/ id="age">
+			</fieldset>
+		</br>
+		<fieldset>
+			<legend id="le">你想在哪里收到邮件？</legend>
+			邮箱<input type="email" autocomplete="on" id="email" list="input_list" placeholder="请输入邮箱" required="true"/><span>*</span>
+	
+		</fieldset>
+		</br>
+		<fieldset>
+			<legend id="le">收入情况</legend>
+			月收入<input type="text" name="in" list="money" placeholder="20k+" id="age"/>
+			<datalist id="money">
+				<option value="20k+"></option>
+				<option value="30k+"></option>
+				<option value="40k+"></option>
+			</datalist></br>
+			银行卡
+			<input type="number" name="bank"/>
+			有效期
+			<input type="date" name="datedemo"/>
+		</fieldset>
+	</br>
+		<fieldset>
+			<legend id="le">选取提交文件</legend>
+			<form id="textform" method="get" action="foms.asp">
+				文件：<input type="file" value="选择文件" multiple="true" />
+			</form>
+		</fieldset>
+	</br>
+		<input type="submit"  value="提交"/>
+		</form>
+	</body>
+</html>

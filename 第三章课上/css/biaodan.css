@@ -1,0 +1,21 @@
+header{
+	font-size:30px;
+}
+span{
+	color: red;
+}
+#le{
+	color: #FF0000;
+}
+#age{
+	width: 50px;;
+}
+fieldset{
+	
+}
+body{
+	position: absolute;
+	right: 250px;;
+   width: 800px;
+
+}
