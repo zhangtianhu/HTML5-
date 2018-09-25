@@ -1,0 +1,66 @@
+#h{
+	color: red;
+	font-size: 35px;
+	font-weight: 900;
+}
+fieldset{
+	width: 510px;
+	height: 200px;
+	position: relative;
+}
+#big{
+	width: 500px;
+	height: 60px;
+	border: 1px solid #3D3D3D;
+}
+#text{
+	width: 500px;
+	height: 80px;
+}
+#gray{
+	background-color: #3D3D3D;
+	width: 25px;
+	height: 25px;
+	float: left;
+	margin-top: 17px;
+}
+#blue{
+	width: 25px;
+	height: 25px;
+	background-color: #9370DB;
+	float: left;
+	margin-top: 17px;
+	margin-left: 10px;
+}
+#red{
+	width: 25px;
+	height: 25px;
+	background-color: red;
+	float: left;
+	margin-top: 17px;
+	margin-left: 10px;
+}
+#blue1{
+	width: 25px;
+	height: 25px;
+	background-color:#87CEEB;
+	float: left;
+	margin-top: 17px;
+	margin-left: 10px;
+}
+#yellow{
+	width: 25px;
+	height: 25px;
+	background-color: #FF8C00;
+	float: left;
+	margin-top: 17px;
+	margin-left: 10px;
+}
+#green{
+	width: 25px;
+	height: 25px;
+	background-color: #7CF700;
+	float: left;
+	margin-top: 17px;
+	margin-left: 10px;
+}

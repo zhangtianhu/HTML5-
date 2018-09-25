@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="Icon.png" />
+		<link rel="stylesheet" type="text/css" href="css/hf.css" />
+		<title>页面换肤</title>
+	</head>
+	<script>
+			
+		var color=['#3D3D3D','#9370DB','red','#87CEEB','#FF8C00','#7CF700'];
+
+		function change1(){
+			var gray=document.getElementById("gray")
+			gray.style.backgroundColor=color[0];
+			localStorage.setItem("color",color[0]);
+			var text = document.getElementById("text");
+			text.style.backgroundColor=localStorage.getItem("color");
+			this.style.top-=10;
+		}
+		function change2(){
+			var blue=document.getElementById("blue");
+			blue.style.backgroundColor=color[1];
+			localStorage.setItem("color",color[1]);
+		    var text = document.getElementById("text");
+			text.style.backgroundColor=localStorage.getItem("color");
+		}
+		function change3(){
+			var red = document.getElementById("red");
+			red.style.backgroundColor=color[2];
+			localStorage.setItem("color",color[2]);
+			var text = document.getElementById("text");
+			text.style.backgroundColor=localStorage.getItem("color");
+		}
+		function change4(){
+			var blue1=document.getElementById("blue1")
+			blue1.style.backgroundColor=color[3];
+			localStorage.setItem("color",color[3]);
+			var text = document.getElementById("text");
+			text.style.backgroundColor=localStorage.getItem("color");
+		}
+		function change5(){
+			var yellow=document.getElementById("yellow");
+			yellow.style.backgroundColor=color[4];
+			localStorage.setItem("color",color[4]);
+			var text = document.getElementById("text");
+			text.style.backgroundColor=localStorage.getItem("color");
+		}
+		function change6(){
+			var green = document.getElementById("green");
+			green.style.backgroundColor=color[5];
+			localStorage.setItem("color",color[5]);
+			var text = document.getElementById("text");
+			text.style.backgroundColor=localStorage.getItem("color");
+		}		
+		window.onload=function colselect(){
+			var text = document.getElementById("text");
+			text.style.backgroundColor=localStorage.getItem("color");
+		}
+	
+	</script>
+	<body>
+		<fieldset>
+			<legend id="h">页面换肤</legend>
+			<div id="big">
+				<div id="gray" onclick="change1()"></div>
+				<div id="blue" onclick="change2()"></div>
+				<div id="red"  onclick="change3()"></div>
+				<div id="blue1" onclick="change4()"></div>
+				<div id="yellow" onclick="change5()"></div>
+				<div id="green" onclick="change6()"></div>
+			</div>
+		<div id="text">
+			LocalStorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，该数据仍然存在，下次打开浏览器浏览网站时仍然可以继续使用。
+		</div>
+		</fieldset>
+	</body>
+</html>
