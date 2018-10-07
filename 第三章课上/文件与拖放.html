@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文件与拖放</title>
+	<style type="text/css">
+		div{
+			border:2px solid gray;
+			width:180px;
+			height:180px;
+		}
+	</style>
+		<script>
+			function movefile(f){
+			if(!window.FileReader){
+				alert("您的浏览器没有FileReader接口")
+			}
+			for(var i=0;i<f.length;i++){
+				
+				var tmp=f[i];
+				var reader = new FileReader();
+				reader.readAsDataURL(tmp);
+	   			 reader.onload = function(e)
+	    		{
+	       			var img_result=document.createElement('span');
+	       			img_result.innerHTML = '<img src="'+this.result+'" id="dragimg" draggable="true" ondragstart="drag(event)" />'
+	       			ev.target.appendChild(document.getElementById(data));
+	   			}
+	    	}
+			}
+	function drag(ev){
+		ev.dataTransfer.setData("Text",ev.target.id); //数据类型是 "Text"，值是可拖动元素的 id ("dragimg")。
+	}
+	
+	function allowDrop(ev) 
+	{ 
+    	ev.preventDefault(); 
+	} 
+
+	function drop(ev){
+		movefile(ev.dataTransfer.files);
+		ev.target.appendChild(document.getElementById(data));
+		ev.preventDefault(); 
+	}
+
+		</script>
+	</head>
+	<body>
+		<legend>拖动上传文件</legend>
+		<div ondrop="drop(event)" ondragover="allowDrop(event)">		
+		</div>
+	</body>
+</html>
