@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" />
+		<title>web留言本</title>
+	</head>
+	<script>
+		function save(){
+			var m=document.getElementById("memo");
+			var t=new Date().getTime();
+			localStorage.setItem(m.value,t);
+		}
+	</script>
+	<body>
+		<h1>简单web留言本</h1>
+		<textarea id="memo" cols="60" rows="10"></textarea>
+		<input type="button" value="添加" onclick="save('memo')"/>
+		<input type="button" value="全部清除" onclick="clear('msg')"/>
+		<hr />
+		<p id="msg"></p>
+	</body>
+</html>

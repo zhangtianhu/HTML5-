@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>50个</title>
+		<style>
+			canvas{
+				border: 1px solid gray;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="1000" height="1000"></canvas>
+	</body>
+	<script>
+		var c= document.getElementById('canvas');
+		var context=c.getContext('2d');
+		for(i=0;i<50;i++){
+		context.beginPath()
+		context.arc(Math.random()*1000,Math.random()*1000,Math.random()*100,2*Math.PI,false);
+		context.globalAlpha = 0.5;
+		context.fillStyle="rgba("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+",0.5)"
+		context.closePath();
+		context.fill();
+		}
+	</script>
+</html>
